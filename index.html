@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atanu Kundu</title>
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- ✅ Tailwind with dark mode enabled (fixed config) -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    .fade { opacity: 0; transform: translateY(30px); transition: all .8s ease; }
+    .fade.show { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-indigo-50 via-white to-pink-50 text-gray-800 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 dark:text-gray-100">
+
+  <!-- Navbar -->
+  <header class="backdrop-blur-md bg-white/40 dark:bg-gray-800/40 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-pink-500 bg-clip-text text-transparent">Atanu Kundu</h1>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#hero" class="hover:text-indigo-500">Home</a>
+        <a href="#talks" class="hover:text-indigo-500">Talks</a>
+        <a href="#projects" class="hover:text-indigo-500">Projects</a>
+        <a href="#skills" class="hover:text-indigo-500">Skills</a>
+        <a href="#teaching" class="hover:text-indigo-500">Teaching</a>
+        <a href="#publications" class="hover:text-indigo-500">Publications</a>
+        <a href="#contact" class="hover:text-indigo-500">Contact</a>
+      </nav>
+      <button id="toggleDark" class="border rounded-md px-3 py-1 hover:bg-gray-100 dark:hover:bg-gray-700 transition">🌙</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="py-20 text-center md:text-left flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto px-6">
+    <img src="assets/img/profile.jpg" alt="Atanu Kundu" class="rounded-full shadow-2xl w-48 h-48 object-cover border-4 border-white dark:border-gray-800 mb-6 md:mb-0 md:mr-10">
+    <div>
+      <h2 class="text-4xl font-extrabold mb-3">Atanu Kundu</h2>
+      <p class="text-lg opacity-90 max-w-3xl text-justify leading-relaxed"> I am a final-year PhD student at the <a href = "http://www.iacs.res.in/maincontroller.php?navid=14&subnavid=74"> School of Mathematical and Computational Sciences</a>, <a href = "http://www.iacs.res.in/"> IACS Kolkata</a>, advised by <a href = "http://iacs.res.in/athusers/index.php?navid=0&userid=IACS0052">Dr. Rajarshi Ray</a>. My research focuses on the verification and falsification of Cyber-Physical Systems (CPS).</p>
+      <!-- Social & Academic Links -->
+      <div class="flex flex-wrap gap-6 mt-6 text-indigo-600">
+
+        <!-- Add Gmail -->
+        <a href="mailto:atanu94kundu@gmail.com" target="_blank" aria-label="Email" 
+          class="flex items-center gap-2 text-indigo-600 hover:text-pink-500 transition text-base">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512" class="w-5 h-5">
+            <path d="M502.3 190.8 327.4 338.5c-23.9 19.5-59 19.5-82.9 0L9.7 190.8C3.9 186.3 0 179.6 0 172.3V128c0-17.7 14.3-32 32-32h448c17.7 0 32 14.3 32 32v44.3c0 7.3-3.9 14-9.7 18.5zM480 192v192c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V192l176 144c35.9 29.5 88.1 29.5 124 0l176-144z"/>
+          </svg>
+          <span>Gmail</span>
+        </a>
+        <!-- DBLP -->
+        <a href="https://dblp.org/pid/315/0836-2.html" target="_blank" aria-label="DBLP" 
+          class="flex items-center gap-2 hover:text-pink-500 transition text-base">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M12 0a12 12 0 1 0 12 12A12.014 12.014 0 0 0 12 0Zm.1 17.5H8.9V6.5h3.2c2.6 0 4 1.3 4 3.6 0 1.3-.5 2.3-1.5 3l1.8 4.4h-2.5l-1.4-3.8h-.5Zm-.1-8.7H10v2.7h2c1.1 0 1.6-.5 1.6-1.3s-.5-1.4-1.6-1.4Z"/>
+          </svg>
+          <span>DBLP</span>
+        </a>
+
+        <!-- Google Scholar -->
+        <a href="https://scholar.google.com/citations?user=DqN47ioAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"
+          class="flex items-center gap-2 hover:text-pink-500 transition text-base">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M12 2 1 12h4v8h6v-6h2v6h6v-8h4Z"/>
+          </svg>
+          <span>Google Scholar</span>
+        </a>
+
+        <!-- ORCID -->
+        <a href="https://orcid.org/my-orcid?orcid=0000-0001-9416-6957" target="_blank" aria-label="ORCID"
+          class="flex items-center gap-2 hover:text-pink-500 transition text-base">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0ZM8.8 6.8a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm1.7 10.4H8.5V9.4h2Zm5.4 0h-3.1V9.4h3.1c2.1 0 3.6 1.5 3.6 3.9s-1.5 3.9-3.6 3.9Zm-.1-6.1h-1v4.3h1c1.4 0 2.3-.9 2.3-2.1s-.9-2.2-2.3-2.2Z"/>
+          </svg>
+          <span>ORCID</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/atanu-kundu-236a10193/" target="_blank" aria-label="LinkedIn"
+          class="flex items-center gap-2 hover:text-pink-500 transition text-base">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M19 0h-14A5 5 0 0 0 0 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5Zm-9.5 18H7v-8h2.5ZM8 8.3a1.4 1.4 0 1 1 0-2.8 1.4 1.4 0 0 1 0 2.8ZM18 18h-2.5v-4.1c0-1-.4-1.7-1.3-1.7s-1.5.8-1.5 1.8V18H10v-8h2.4v1.1a2.8 2.8 0 0 1 2.6-1.3c1.9 0 3 1.3 3 3.6Z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <!-- GitLab -->
+        <a href="https://gitlab.com/Atanukundu" target="_blank" aria-label="GitLab"
+          class="flex items-center gap-2 hover:text-pink-500 transition text-base">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M22.65 9.39 20.19 2.37a.62.62 0 0 0-1.17 0l-2.18 6.7H7.16l-2.18-6.7a.62.62 0 0 0-1.17 0L1.35 9.39a1.2 1.2 0 0 0 .43 1.34l9.89 7.16a1 1 0 0 0 1.16 0l9.89-7.16a1.2 1.2 0 0 0 .43-1.34Z"/>
+          </svg>
+          <span>GitLab</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Updates -->
+  <section id="news" class="max-w-6xl mx-auto px-6 py-16 bg-gradient-to-r from-indigo-100 to-pink-100 dark:from-gray-800 dark:to-gray-900 rounded-xl">
+    <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">News & Updates</h3>
+
+    <div class="space-y-6">
+
+      <!-- News Item 1 -->
+      <div class="p-5 bg-white/70 dark:bg-gray-800/70 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-lg font-semibold text-indigo-600 mb-1">🎤 Talk</h4>
+        <p class="text-sm opacity-80 mb-1">December 2025</p>
+        <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+          I will deliver a talk titled <em>“Data-Driven Falsification of Cyber-Physical Systems”</em> and present a poster titled <em>“A CEGAR-centric Bounded Reachability Analysis for Compositional Affine Hybrid Systems”</em> at the RHPL Workshop, held as part of <strong>FSTTCS 2025</strong> at <strong>BITS Pilani Goa</strong>.
+        </p>
+      </div>
+
+      <!-- News Item 2 -->
+      <div class="p-5 bg-white/70 dark:bg-gray-800/70 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-lg font-semibold text-indigo-600 mb-1">📢 Paper Accepted at IEEE TCAD</h4>
+        <p class="text-sm opacity-80 mb-1">September 2025</p>
+        <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+          Our paper <em>“Data-Driven Falsification of Cyber-Physical Systems”</em> has been accepted for publication in 
+          <strong>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</strong>.
+        </p>
+      </div>
+
+      <!-- News Item 3 -->
+      <div class="p-5 bg-white/70 dark:bg-gray-800/70 rounded-xl shadow hover:shadow-lg transition">
+        <h4 class="text-lg font-semibold text-indigo-600 mb-1">🛠 Tool Update: FlexiFal Released</h4>
+        <p class="text-sm opacity-80 mb-1">July 2025</p>
+        <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+          <strong>FlexiFal</strong> — a surrogate-assisted falsification framework for CPS 
+          with improved surrogate training.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- RESEARCH INTERESTS -->
+  <section id="research" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-3xl font-semibold mb-4 border-l-4 border-indigo-500 pl-4">Research Interests</h3>
+    <p class="max-w-5xl opacity-85 mb-4 text-justify leading-relaxed">My current research interest is the verification of compositional CPS, where several system components are connected to form a complex CPS. Additionally, I am working on surrogate model based falsification frameworks, where several machine learning models utilized as surrogate models.</p>
+
+    <div class="flex flex-wrap gap-8">
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Cyber-Physical Systems</span>
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Bounded Model Checking</span>
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Falsification</span>
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Machine Learning for Falsification</span>
+    </div>
+
+     <!-- For more details + Download CV button -->
+    <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+      <p class="text-gray-700 dark:text-gray-300 text-base">For more details,</p>
+      <a href="assets/cv/resume_atanu.pdf" target="_blank"
+        class="inline-block px-6 py-2 bg-indigo-600 text-white font-medium rounded-lg shadow hover:bg-indigo-700 transition">
+        Download CV
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-16  bg-gradient-to-r from-indigo-100 to-pink-100 dark:from-gray-800 dark:to-gray-900 rounded-xl">
+    <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">Research Projects</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="p-6 rounded-xl bg-white/60 dark:bg-gray-800/60 shadow hover:shadow-lg">
+        <h4 class="text-xl font-semibold text-indigo-600 mb-2">SAT-Assisted Graph Encoding</h4>
+        <p class="text-sm opacity-80">A scalable tool leveraging SAT-solving for affine hybrid systems.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-white/60 dark:bg-gray-800/60 shadow hover:shadow-lg">
+        <h4 class="text-xl font-semibold text-indigo-600 mb-2">Building FNN Models for CPS</h4>
+        <p class="text-sm opacity-80">Integrates deep learning and robustness metrics for falsification of Simulink models.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="max-w-6xl mx-auto px-6 py-16">
+    <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">Publications</h3>
+
+    <div class="space-y-6">
+
+      <!-- Paper 1 -->
+      <div class="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow hover:shadow-lg transition">
+        <a href="https://arxiv.org/pdf/2509.03560" target="_blank" class="group">
+          <h4 class="text-lg font-semibold text-indigo-600 group-hover:underline group-hover:decoration-pink-500 transition">
+            A Cegar-centric Bounded Reachability Analysis for Compositional Affine Hybrid Systems
+          </h4>
+        </a>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-1">
+          <span class="font-medium">Authors:</span> A. Kundu , P. Sarkar, and R. Ray
+        </p>
+        <p class="text-sm opacity-70">arXiv preprint arXiv:2509.03560, 2025</p>
+      </div>
+
+      <!-- Paper 2 -->
+      <div class="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow hover:shadow-lg transition">
+        <a href="https://ieeexplore.ieee.org/document/11156105" target="_blank" class="group">
+          <h4 class="text-lg font-semibold text-indigo-600 group-hover:underline group-hover:decoration-pink-500 transition">
+            Data-Driven Falsification of Cyber-Physical Systems
+          </h4>
+        </a>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-1">
+          <span class="font-medium">Authors:</span> Atanu Kundu, Sauvik Gon, and Rajarshi Ray
+        </p>
+        <p class="text-sm opacity-70">IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), 2025</p>
+      </div>
+
+      <!-- Paper 3 -->
+      <div class="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow hover:shadow-lg transition">
+        <a href="https://dl.acm.org/doi/10.1145/3641399.3641401" target="_blank" class="group">
+          <h4 class="text-lg font-semibold text-indigo-600 group-hover:underline group-hover:decoration-pink-500 transition">
+            Data-Driven Falsification of Cyber-Physical Systems
+          </h4>
+        </a>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-1">
+          <span class="font-medium">Authors:</span> Atanu Kundu, Sauvik Gon, and Rajarshi Ray
+        </p>
+        <p class="text-sm opacity-70">17th Innovations in Software Engineering Conference, ISEC, 2024</p>
+      </div>
+
+      <!-- Paper 4 -->
+      <div class="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow hover:shadow-lg transition">
+        <a href="https://easychair.org/publications/paper/fKVR" target="_blank" class="group">
+          <h4 class="text-lg font-semibold text-indigo-600 group-hover:underline group-hover:decoration-pink-500 transition">
+            ARCH-COMP24 category report: Falsification
+          </h4>
+        </a>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-1">
+          <span class="font-medium">Authors:</span> C. Menghi, T. Khandait, A. Kundu, et al.
+        </p>
+        <p class="text-sm opacity-70">International Workshop on Applied Verification of Continuous and Hybrid Systems (ARCH24), 2024</p>
+      </div>
+
+      <!-- Paper 5 -->
+      <div class="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow hover:shadow-lg transition">
+        <a href="https://easychair.org/publications/paper/ZSb4" target="_blank" class="group">
+          <h4 class="text-lg font-semibold text-indigo-600 group-hover:underline group-hover:decoration-pink-500 transition">
+            ARCH-COMP24 category report: Hybrid systems with piecewise constant dynamics and bounded model checking
+          </h4>
+        </a>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-1">
+          <span class="font-medium">Authors:</span> L. Bu, A. Kundu , R. Ray, and Y. Shi
+        </p>
+        <p class="text-sm opacity-70">International Workshop on Applied Verification of Continuous and Hybrid Systems (ARCH23), 2023</p>
+      </div>
+
+      <!-- Paper 6 -->
+      <div class="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow hover:shadow-lg transition">
+        <a href="https://dl.acm.org/doi/10.1145/3567425" target="_blank" class="group">
+          <h4 class="text-lg font-semibold text-indigo-600 group-hover:underline group-hover:decoration-pink-500 transition">
+            SAT-Reach : A Bounded Model Checker for Affine Hybrid Systems
+          </h4>
+        </a>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-1">
+          <span class="font-medium">Authors:</span> Atanu Kundu, Sarthak Das, and Rajarshi Ray
+        </p>
+        <p class="text-sm opacity-70">ACM Transactions on Embedded Computing Systems (TECS), 2023</p>
+      </div>
+
+      <!-- Paper 7 -->
+      <div class="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow hover:shadow-lg transition">
+        <a href="https://easychair.org/publications/paper/wFh9" target="_blank" class="group">
+          <h4 class="text-lg font-semibold text-indigo-600 group-hover:underline group-hover:decoration-pink-500 transition">
+            ARCH-COMP23 category report: Falsification
+          </h4>
+        </a>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-1">
+          <span class="font-medium">Authors:</span> C. Menghi, P. Arcaini, A. Kundu, et al.
+        </p>
+        <p class="text-sm opacity-70">International Workshop on Applied Verification of Continuous and Hybrid Systems (ARCH23), 2023</p>
+      </div>
+
+      <!-- Paper 8 -->
+      <div class="p-5 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow hover:shadow-lg transition">
+        <a href="https://easychair.org/publications/paper/22kG" target="_blank" class="group">
+          <h4 class="text-lg font-semibold text-indigo-600 group-hover:underline group-hover:decoration-pink-500 transition">
+            ARCH-COMP22 category report: Hybrid systems with piecewise constant dynamics and bounded model checking
+          </h4>
+        </a>
+        <p class="text-sm text-gray-700 dark:text-gray-300 italic mb-1">
+          <span class="font-medium">Authors:</span> L. Bu, G. Frehse, A. Kundu, R. Ray, Y. Shi, and E. Zaffanella
+        </p>
+        <p class="text-sm opacity-70">International Workshop on Applied Verification of Continuous and Hybrid Systems (ARCH22), 2022</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Invited Talks -->
+  <section id="talks" class="max-w-6xl mx-auto px-6 py-16 bg-gradient-to-r from-indigo-100 to-pink-100 dark:from-gray-800 dark:to-gray-900 rounded-xl">
+    <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">Invited Talks</h3>
+
+    <div id="talkContainer" class="grid md:grid-cols-2 gap-6 transition-all"></div>
+
+    <!-- Navigation Buttons -->
+    <div class="flex justify-center gap-6 mt-8">
+      <button id="prevTalk" class="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition shadow">◀ Prev</button>
+      <button id="nextTalk" class="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition shadow">Next ▶</button>
+    </div>
+  </section>
+
+
+  <!-- Skills & Tools -->
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-16">
+    <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">Skills & Tools</h3>
+    <h4 class="text-xl font-semibold mb-4 text-indigo-600">Technical Skills</h4>
+    <div class="flex flex-wrap gap-3 mb-10">
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">SAT Solving</span>
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Bounded Model Checking</span>
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Reachability Analysis</span>
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Machine Learning</span>
+      <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-700">Robustness Measure of a trace</span>
+    </div>
+    <h4 class="text-xl font-semibold mb-4 text-indigo-600">Tools Developed</h4>
+    <!-- Tools Developed -->
+    <div class="grid sm:grid-cols-3 gap-4">
+
+      <!-- FlexiFal -->
+      <a href="https://gitlab.com/Atanukundu/FlexiFal" target="_blank" 
+        class="group p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 hover:bg-gradient-to-r hover:from-indigo-100 hover:to-pink-100 dark:hover:from-gray-700 dark:hover:to-gray-800">
+        <div class="flex items-center justify-between mb-2">
+          <h5 class="font-semibold text-indigo-600 group-hover:text-pink-600 transition">FlexiFal</h5>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 group-hover:text-pink-600 transition" viewBox="0 0 24 24">
+            <path d="M22.65 9.39 20.19 2.37a.62.62 0 0 0-1.17 0l-2.18 6.7H7.16l-2.18-6.7a.62.62 0 0 0-1.17 0L1.35 9.39a1.2 1.2 0 0 0 .43 1.34l9.89 7.16a1 1 0 0 0 1.16 0l9.89-7.16a1.2 1.2 0 0 0 .43-1.34Z"/>
+          </svg>
+        </div>
+        <p class="text-sm opacity-80">Surrogate-Assisted Falsification Framework for CPS.</p>
+      </a>
+
+      <!-- NNFal -->
+      <a href="https://gitlab.com/Atanukundu/NNFal" target="_blank" 
+        class="group p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 hover:bg-gradient-to-r hover:from-indigo-100 hover:to-pink-100 dark:hover:from-gray-700 dark:hover:to-gray-800">
+        <div class="flex items-center justify-between mb-2">
+          <h5 class="font-semibold text-indigo-600 group-hover:text-pink-600 transition">NNFal</h5>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 group-hover:text-pink-600 transition" viewBox="0 0 24 24">
+            <path d="M22.65 9.39 20.19 2.37a.62.62 0 0 0-1.17 0l-2.18 6.7H7.16l-2.18-6.7a.62.62 0 0 0-1.17 0L1.35 9.39a1.2 1.2 0 0 0 .43 1.34l9.89 7.16a1 1 0 0 0 1.16 0l9.89-7.16a1.2 1.2 0 0 0 .43-1.34Z"/>
+          </svg>
+        </div>
+        <p class="text-sm opacity-80">FNN-based Falsification Framework for CPS.</p>
+      </a>
+
+      <!-- SAT-Reach -->
+      <a href="https://gitlab.com/Atanukundu/SAT-Reach" target="_blank" 
+        class="group p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg shadow hover:shadow-xl transition transform hover:-translate-y-1 hover:bg-gradient-to-r hover:from-indigo-100 hover:to-pink-100 dark:hover:from-gray-700 dark:hover:to-gray-800">
+        <div class="flex items-center justify-between mb-2">
+          <h5 class="font-semibold text-indigo-600 group-hover:text-pink-600 transition">SAT-Reach</h5>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 group-hover:text-pink-600 transition" viewBox="0 0 24 24">
+            <path d="M22.65 9.39 20.19 2.37a.62.62 0 0 0-1.17 0l-2.18 6.7H7.16l-2.18-6.7a.62.62 0 0 0-1.17 0L1.35 9.39a1.2 1.2 0 0 0 .43 1.34l9.89 7.16a1 1 0 0 0 1.16 0l9.89-7.16a1.2 1.2 0 0 0 .43-1.34Z"/>
+          </svg>
+        </div>
+        <p class="text-sm opacity-80">Bounded model checker for affine hybrid systems.</p>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- Teaching -->
+  <section id="teaching" class="max-w-6xl mx-auto px-6 py-16">
+    <h3 class="text-3xl font-semibold mb-8 border-l-4 border-indigo-500 pl-4">Teaching Experience</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="p-6 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow">
+        <h4 class="text-lg font-semibold text-indigo-600">Artiﬁcial Intelligence (Theory & Lab)</h4>
+        <p class="text-sm opacity-80">Teaching Assistant — Spring 2022</p>
+      </div>
+      <div class="p-6 bg-white/60 dark:bg-gray-800/60 rounded-xl shadow">
+        <h4 class="text-lg font-semibold text-indigo-600">Object-Oriented Programming with C++ Lab</h4>
+        <p class="text-sm opacity-80">Teaching Assistant — Autumn 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="max-w-6xl mx-auto px-6">
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent my-8"></div>
+  </div> -->
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-16 bg-gradient-to-r from-indigo-100 to-pink-100 dark:from-gray-800 dark:to-gray-900 rounded-xl">
+    <h3 class="text-3xl font-semibold mb-6 border-l-4 border-indigo-500 pl-4">Contact</h3>
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <p class="opacity-90 mb-6 text-black-100 text-base leading-relaxed">
+        Interested in collaboration, mentoring, or discussion? Get in touch!
+      </p>
+
+      <!-- Email button -->
+      <a href="mailto:atanu94kundu@gmail.com"
+        class="inline-block px-6 py-3 bg-white text-indigo-700 rounded-lg font-semibold hover:bg-gray-100 transition shadow">
+        Email Me
+      </a>
+
+      <!-- Address block -->
+      <div class="mt-8 text-sm leading-relaxed text-indigo-700">
+        <p>School of Mathematical and Computational Sciences</p>
+        <p>Indian Association for the Cultivation of Science (IACS)</p>
+        <p>Jadavpur, Kolkata – 700032, India</p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="py-6 text-center text-sm bg-white/60 dark:bg-gray-800/60">
+    © 2025 Atanu Kundu — Designed by ChatGPT5.
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+    const toggleBtn = document.getElementById('toggleDark');
+
+    // Load saved mode
+    if (localStorage.theme === 'dark') {
+      html.classList.add('dark');
+      toggleBtn.textContent = '☀️'; // show sun in dark mode
+    }
+
+    // Toggle on click
+    toggleBtn.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      toggleBtn.textContent = isDark ? '☀️' : '🌙';
+      localStorage.theme = isDark ? 'dark' : 'light';
+    });
+
+    // Fade-in animations
+    const fades = document.querySelectorAll('.fade');
+    const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('show'); }), { threshold: 0.2 });
+    fades.forEach(f => obs.observe(f));
+
+    // Talks data
+    const talks = [
+      {
+        t: 'Data-driven Falsification of Cyber-Physical Systems',
+        c: '17th Innovations in Software Engineering Conference (ISEC) 2024',
+        v: 'IIIT Bangalore'
+      },
+      {
+        t: 'SAT-Reach: A Bounded Model Checker for Affine Hybrid Systems.',
+        c: 'Formal Method Update Meeting 2022',
+        v: 'IIT Delhi'
+      },
+      {
+        t: 'A Framework for Detecting Unsafe Behaviour in Cyber-Physical Systems',
+        c: 'Tech Symposium on Computing Trends 2023',
+        v: 'Thales India &amp; University of Calcutta'
+      }
+    ];
+
+    let slide = 0;
+    const cont = document.getElementById('talkContainer');
+    const talksPerSlide = 2;
+    const totalSlides = Math.ceil(talks.length / talksPerSlide);
+
+    function renderTalks() {
+      cont.innerHTML = '';
+      for (let i = slide * talksPerSlide; i < slide * talksPerSlide + talksPerSlide && i < talks.length; i++) {
+        const t = talks[i];
+        const card = document.createElement('div');
+        card.className = 'p-6 rounded-2xl bg-white/60 dark:bg-gray-800/60 shadow hover:shadow-lg transform transition-all duration-700 opacity-0 translate-y-6';
+        card.innerHTML = `
+          <h4 class="text-xl font-semibold text-indigo-600 mb-1">${t.t}</h4>
+          <p class="text-sm font-medium text-pink-600 mb-1">${t.c}</p>
+          <p class="text-sm italic opacity-80">${t.v}</p>
+        `;
+        cont.appendChild(card);
+        // Animation
+        setTimeout(() => {
+          card.classList.add('opacity-100', 'translate-y-0');
+        }, 100 * (i - slide * talksPerSlide));
+      }
+    }
+
+    // Initial render
+    renderTalks();
+
+    // Auto-slide
+    let autoSlide = setInterval(nextSlide, 6000);
+
+    // Manual navigation
+    document.getElementById('nextTalk').addEventListener('click', () => {
+      nextSlide();
+      resetTimer();
+    });
+    document.getElementById('prevTalk').addEventListener('click', () => {
+      prevSlide();
+      resetTimer();
+    });
+
+    function nextSlide() {
+      slide = (slide + 1) % totalSlides;
+      renderTalks();
+    }
+
+    function prevSlide() {
+      slide = (slide - 1 + totalSlides) % totalSlides;
+      renderTalks();
+    }
+
+    function resetTimer() {
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextSlide, 6000);
+    }
+
+  </script>
+
+</body>
+</html>
